@@ -716,6 +716,7 @@ h1 {
 }
 
 .font-post-link {
+  font-family: var(--regular);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -727,10 +728,10 @@ h1 {
   background: linear-gradient(130deg, #f7f8fa, #d9dce6);
   box-shadow: 0 13px 20px #4a506a12;
   color: #141821;
-  font-size: 23px;
+  font-size: 48px;
   font-weight: 800;
   line-height: 1.2;
-  letter-spacing: -0.8px;
+  letter-spacing: 1px;
   text-decoration: none;
 }
 
