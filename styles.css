@@ -652,6 +652,8 @@ h1 {
 }
 
 .font-art {
+  object-fit: cover;
+  height: 194.4px;
   border-radius: 3px;
   position: relative;
   isolation: isolate;
