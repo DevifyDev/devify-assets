@@ -360,12 +360,75 @@ h1 {
   color: var(--premium-white);
 }
 
-.post-2 .post-audit-image {
-  display: block;
+.post-2 .post-audit-preview {
+  --audit-content-width: 360px;
   width: calc(100% + 44px);
-  max-width: none;
-  height: auto;
   margin-inline: -22px;
+  padding: 44px 25px 40px;
+  border-top: 1px solid rgb(165 180 252 / 0.15);
+  background: var(--post-gradient);
+  color: #b8b8ce;
+  font-family: var(--proxima);
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.post-2 .post-audit-preview h2 {
+  width: min(100%, var(--audit-content-width));
+  margin: 0 auto;
+  background: linear-gradient(110deg, #7956de, #a5b4fc);
+  background-clip: text;
+  color: transparent;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.post-2 .post-audit-summary {
+  max-width: 350px;
+  margin-top: 11px;
+  margin-inline: auto;
+  color: var(--premium-white);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.post-2 .post-audit-form {
+  display: flex;
+  align-items: center;
+  width: min(100%, var(--audit-content-width));
+  margin-top: 25px;
+  margin-inline: auto;
+  padding: 3px;
+  border: 1px solid rgb(255 255 255 / 0.55);
+  border-radius: 4px;
+  background: #fff;
+  color: #192039;
+  font-size: 12px;
+}
+
+.post-2 .post-audit-url {
+  flex: 1;
+  padding-inline: 9px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.post-2 .post-audit-button {
+  padding: 7px 12px;
+  border-radius: 2px;
+  background: #101d49;
+  color: #fff;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.post-2 .post-audit-disclaimer {
+  margin-top: 7px;
+  color: #93c5fd;
+  font-size: 12px;
+  line-height: 1.6;
 }
 
 .post-logo-text {
