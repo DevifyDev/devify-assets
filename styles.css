@@ -651,6 +651,51 @@ h1 {
   letter-spacing: -2px;
 }
 
+.post-4 {
+  --post-border-gradient: linear-gradient(135deg, #363639 0%, #29292c 50%, #1c1c1f 100%);
+  background: var(--post-border-gradient);
+}
+
+.post-4 .font-post-paper {
+  padding-top: 49px;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 504 639' preserveAspectRatio='none'%3E%3Cpath d='M5 5 C169.666667 -5.392305 334.333333 15.392305 499 5 C509.392305 214.666667 488.607695 424.333333 499 634 C334.333333 644.392305 169.666667 623.607695 5 634 C-5.392305 424.333333 15.392305 214.666667 5 5Z' fill='%238bd9e5' fill-opacity='0.01'/%3E%3C/svg%3E") center / calc(100% - 12px) calc(100% - 12px) no-repeat,
+    #fff;
+}
+
+.post-4 .font-post-paper::before {
+  inset: 6px;
+  border: 0;
+  background: var(--post-border-gradient);
+  /* ±3px S curves; extra mask space keeps the outward waves from clipping. */
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 504 639' preserveAspectRatio='none'%3E%3Cpath d='M5 5 C169.666667 -5.392305 334.333333 15.392305 499 5 C509.392305 214.666667 488.607695 424.333333 499 634 C334.333333 644.392305 169.666667 623.607695 5 634 C-5.392305 424.333333 15.392305 214.666667 5 5Z' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+}
+
+.post-4 .font-post-title {
+  padding-bottom: 0.15em;
+  margin-bottom: -0.15em;
+  background: var(--post-border-gradient);
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.post-4 .font-post-description {
+  color: #21163d;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.post-4 .font-post-link {
+  margin-top: 37px;
+  padding: 7px 11px 15px;
+  border-radius: 10px;
+  color: #000;
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
 .font-art {
   object-fit: cover;
   height: 194.4px;
@@ -664,6 +709,12 @@ h1 {
   border: 2px solid #1b1726;
   background: linear-gradient(110deg, #292442 0%, #675078 48%, #ca7e8e 80%, #ffd49d 100%);
   box-shadow: 0 3px 8px #241a341a;
+}
+
+.post-4 .font-art {
+  margin-top: 35px;
+  height: 240px;
+  flex-basis: 240px;
 }
 
 .font-art-ceiling {
