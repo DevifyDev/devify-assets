@@ -687,6 +687,31 @@ h1 {
   line-height: 1.55;
 }
 
+.post-5,
+.post-5 .font-post-paper::before {
+  background: linear-gradient(135deg, #0A192F 0%, #0072FF 100%);
+}
+
+.post-5 .font-post-paper {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 504 639' preserveAspectRatio='none'%3E%3Cpath d='M5 5 C169.666667 -5.392305 334.333333 15.392305 499 5 C509.392305 214.666667 488.607695 424.333333 499 634 C334.333333 644.392305 169.666667 623.607695 5 634 C-5.392305 424.333333 15.392305 214.666667 5 5Z' fill='%23E6F2FF' fill-opacity='0.5'/%3E%3C/svg%3E") center / calc(100% - 12px) calc(100% - 12px) no-repeat,
+    #fff;
+}
+
+.post-5 .font-post-title {
+  font-weight: 800;
+}
+
+.post-5 .font-post-description-lead {
+  display: inline;
+  font-size: 24px;
+  line-height: inherit;
+}
+
+.post-5 .font-post-percentage {
+  font-weight: 700;
+}
+
 .post-4 .font-post-link {
   margin-top: 37px;
   padding: 7px 11px 15px;
@@ -715,6 +740,15 @@ h1 {
   margin-top: 35px;
   height: 240px;
   flex-basis: 240px;
+}
+
+.post-5 .font-art {
+  height: 264px;
+  flex-basis: 264px;
+}
+
+.post-5 .font-post-link {
+  margin-top: 13px;
 }
 
 .font-art-ceiling {
