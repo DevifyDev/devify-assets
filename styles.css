@@ -1099,9 +1099,16 @@ h1 {
     var(--brand-gradient);
 }
 
+.highlight-cover-container {
+  display: flex;
+  justify-content: center;
+}
+
 .highlight-cover {
   width: 540px;
   height: 540px;
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
