@@ -1136,5 +1136,7 @@ h1 {
   );
   /* Blend the color transitions into a soft glow over the teal base. */
   filter: blur(18px);
+  /* Reduce the glow by 15%, then another 5%, preserving its proportions. */
+  transform: scale(0.8075);
   pointer-events: none;
 }

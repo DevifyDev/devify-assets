@@ -112,7 +112,7 @@ const highlightStars = [[0, 0], [50, 50], [25, 75]].map(([offsetX, offsetY]) =>
 ).join(', ');
 document.querySelector('.highlight-cover-1')?.style.setProperty(
   '--stars',
-  highlightStars
+  highlightStars.replace(/([\d.]+)px/g, (_, radius) => `${Number(radius) * 4}px`)
 );
 document.querySelector('.post')?.style.setProperty(
   '--stars',
