@@ -103,6 +103,15 @@ const extraPostStars = `
 `;
 
 document.documentElement.style.setProperty('--stars', stars.trim());
+// Offset a second copy of the profile's star field without changing star sizes.
+const highlightStars = stars.replace(
+  /at ([\d.]+)% ([\d.]+)%/g,
+  (_, x, y) => `at ${((Number(x) + 50) % 100).toFixed(1)}% ${((Number(y) + 50) % 100).toFixed(1)}%`
+);
+document.querySelector('.highlight-cover-1')?.style.setProperty(
+  '--stars',
+  `${stars.trim()}, ${highlightStars.trim()}`
+);
 document.querySelector('.post')?.style.setProperty(
   '--stars',
   `${stars.trim()}, ${extraPostStars.trim()}`

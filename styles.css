@@ -128,6 +128,35 @@ h1 {
   line-height: 1;
 }
 
+.google-business {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  margin-inline: auto;
+  border: 1px solid #000;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-synthesis: none;
+  width: 600px;
+  height: 314px;
+  background: var(--stars), var(--brand-gradient);
+  color: var(--premium-white);
+  font-family: var(--rough);
+  font-weight: 400;
+  font-style: oblique;
+  font-size: 9rem;
+  border: none;
+  letter-spacing: 2px;
+}
+
+.google-business-text{
+  margin-bottom: 2rem;
+}
+
 .opengraph {
   width: 600px;
   height: 315px;
@@ -1058,7 +1087,8 @@ h1 {
   mask-composite: exclude;
 }
 
-.post-6 {
+.post-6,
+.highlight-cover-1 {
   background:
     radial-gradient(
       ellipse at 50% 50%,
@@ -1068,4 +1098,33 @@ h1 {
     ),
     var(--stars),
     var(--brand-gradient);
+}
+
+.highlight-cover {
+  width: 540px;
+  height: 540px;
+  border: none;
+}
+
+.highlight-cover-2 {
+  position: relative;
+  background: #005060;
+}
+
+.highlight-cover-2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* Favicon Dev's gradient, with every radius reduced to 70%. */
+  background: radial-gradient(
+    ellipse at center,
+    #fffce3 0%,
+    #faf4c7 19.6%,
+    #afbea0 38.5%,
+    #427d7b 54.6%,
+    #005060 70%
+  );
+  /* Blend the color transitions into a soft glow over the teal base. */
+  filter: blur(18px);
+  pointer-events: none;
 }
