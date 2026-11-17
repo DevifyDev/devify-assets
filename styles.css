@@ -1087,8 +1087,7 @@ h1 {
   mask-composite: exclude;
 }
 
-.post-6,
-.highlight-cover-1 {
+.post-6 {
   background:
     radial-gradient(
       ellipse at 50% 50%,
@@ -1104,6 +1103,10 @@ h1 {
   width: 540px;
   height: 540px;
   border: none;
+}
+
+.highlight-cover-1 {
+  background: var(--stars), var(--brand-gradient);
 }
 
 .highlight-cover-2 {
