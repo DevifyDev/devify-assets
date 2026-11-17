@@ -1,0 +1,18 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 34.5 200 200' fill='none' stroke='#101326' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>
+  <defs>
+    <pattern id='hatch' width='5' height='5' patternUnits='userSpaceOnUse'>
+      <path d='M-1 1 1-1M0 5 5 0M4 6 6 4M0 0 5 5' stroke-width='.65'/>
+    </pattern>
+  </defs>
+  <!-- The same paper fill, ink outlines, and crosshatching as the laptop. -->
+  <path d='m24 112 6 1-1 57-6 1Z' fill='#f5f5ff' stroke-width='2.3'/>
+  <path d='m26 114 4-1-1 57-3 1Z' fill='url(#hatch)' stroke-width='.8'/>
+  <path d='m169 112 6-1 2 59-7 1Z' fill='#f5f5ff' stroke-width='2.3'/>
+  <path d='m172 113 3-2 2 59-4 1Z' fill='url(#hatch)' stroke-width='.8'/>
+  <path d='m130 112 39-1 1 42-40 1Z' fill='#f5f5ff' stroke-width='2.2'/>
+  <path d='m163 113 6-2 1 42-6 1Z' fill='url(#hatch)' stroke-width='1'/>
+  <path d='m131 132 32-1M143 121h9m-9 20h9' stroke-width='1.4'/>
+  <path d='m24 99 152-1 13 12q2 3-2 4l-173 1q-4-1-2-4Z' fill='#f5f5ff' stroke-width='2.5'/>
+  <path d='m12 111 177-1-1 7-175 1Z' fill='#f5f5ff' stroke-width='2'/>
+  <path d='m13 112 175-1v6l-175 1Z' fill='url(#hatch)' stroke-width='.8'/>
+</svg>

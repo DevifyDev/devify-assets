@@ -110,10 +110,12 @@ const highlightStars = [[0, 0], [50, 50], [25, 75]].map(([offsetX, offsetY]) =>
     (_, x, y) => `at ${((Number(x) + offsetX) % 100).toFixed(1)}% ${((Number(y) + offsetY) % 100).toFixed(1)}%`
   )
 ).join(', ');
-document.querySelector('.highlight-cover-1')?.style.setProperty(
-  '--stars',
-  highlightStars.replace(/([\d.]+)px/g, (_, radius) => `${Number(radius) * 1.7}px`)
-);
+document.querySelectorAll('.highlight-cover').forEach((cover) => {
+  cover.style.setProperty(
+    '--stars',
+    highlightStars.replace(/([\d.]+)px/g, (_, radius) => `${Number(radius) * 1.7}px`)
+  );
+});
 document.querySelector('.post')?.style.setProperty(
   '--stars',
   `${stars.trim()}, ${extraPostStars.trim()}`

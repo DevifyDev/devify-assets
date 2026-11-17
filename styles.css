@@ -1105,6 +1105,8 @@ h1 {
 }
 
 .highlight-cover {
+  position: relative;
+  isolation: isolate;
   width: 540px;
   height: 540px;
   margin: 0;
@@ -1112,39 +1114,32 @@ h1 {
   border: none;
 }
 
-.highlight-cover-1 {
+.highlight-cover::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background:
     radial-gradient(
-      ellipse at 50% 75%,
+      ellipse at 50% 85%,
       rgba(0, 240, 255, 0.32) 0%,
       rgba(59, 130, 246, 0.26) 35%,
       transparent 75%
     ),
     var(--stars),
     var(--brand-gradient);
-}
-
-.highlight-cover-2 {
-  position: relative;
-  background: #005060;
-}
-
-.highlight-cover-2::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  /* Favicon Dev's gradient, with every radius reduced to 70%. */
-  background: radial-gradient(
-    ellipse at center,
-    #fffce3 0%,
-    #faf4c7 19.6%,
-    #afbea0 38.5%,
-    #427d7b 54.6%,
-    #005060 70%
-  );
-  /* Blend the color transitions into a soft glow over the teal base. */
-  filter: blur(18px);
-  /* Reduce the glow by 15%, then another 5%, preserving its proportions. */
-  transform: scale(0.8075);
+  filter: brightness(0.8);
   pointer-events: none;
+}
+
+.highlight-cover-icon {
+  width: 302.4px;
+  height: 302.4px;
+  display: block;
+  object-fit: contain;
+}
+
+.highlight-cover-2 .highlight-cover-icon {
+  width: 393.12px;
+  height: 393.12px;
 }
