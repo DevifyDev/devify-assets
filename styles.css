@@ -1043,6 +1043,7 @@ h1 {
   justify-content: flex-start;
   /* Inner border edge (10px inset + 2px stroke), then a 1rem gap. */
   padding-top: calc(12px + 1rem);
+  padding-bottom: 15px;
   background:
     linear-gradient(135deg, #FFFEFC 0%, #FBF7F2 50%, #F6EFE6 100%)
       center / calc(100% - 24px) calc(100% - 24px) no-repeat,
@@ -1061,12 +1062,12 @@ h1 {
   flex-shrink: 0;
   align-self: flex-end;
   /* Compensate for the paper's 30px side padding to match the top gap. */
-  margin: 0 calc(12px + 1rem - 30px) 2rem 0;
+  margin: 0 calc(12px + 1rem - 30px) 1rem 0;
   padding: 5px 12px;
-  border: 0.25px solid rgb(94 73 59 / 0.8);
+  border: 0.25px solid rgb(201 174 138 / 0.8);
   border-radius: 5px;
   background: linear-gradient(135deg, #FFFCF7 0%, #EADCCB 100%);
-  color: #45332A;
+  color: #3D1C18;
   font-family: 'Sora', sans-serif;
   font-size: 11px;
   font-weight: 600;
@@ -1079,7 +1080,7 @@ h1 {
   width: 90%;
   background: none;
   color: #2C1E19;
-  font-size: 34px;
+  font-size: 32px;
   font-weight: 700;
 }
 
@@ -1098,9 +1099,9 @@ h1 {
   flex: 1;
   min-height: 0;
   width: 90%;
-  margin-top: 35px;
+  margin-top: 1rem;
   border: none;
-  background: #141821;
+  background: none;
 }
 
 .post-7 .mobile-scroll-image img {
@@ -1108,22 +1109,45 @@ h1 {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .post-7 .font-post-description {
-  flex-shrink: 0;
-  width: 90%;
-  margin-top: 20px;
-  color: #5E493B;
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* The uncropped image's wood panels occupy its bottom 35%. */
+  height: 35%;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  color: #F4EBDD;
+  line-height: 1.45;
 }
 
 .post-7 .font-post-link {
   flex-shrink: 0;
-  color: #45332A;
-  font-size: 28px;
+  color: #3D1C18;
+  font-family: 'Sora', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-top: 12px;
+  padding-block: 4px;
   border: none;
-  background: linear-gradient(135deg, #FFFCF7 0%, #EADCCB 100%);
+  border-radius: 5px;
+  background: none;
+  box-shadow: none;
+}
+
+.post-7 .mobile-scroll-link-gradient {
+  font: inherit;
+  background: linear-gradient(135deg, var(--post-7-border-stops));
+  background-clip: text;
+  color: transparent;
 }
 
 /* Post 6 PageSpeed override */
