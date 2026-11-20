@@ -1041,7 +1041,8 @@ h1 {
   transform: scale(2);
   transform-origin: top left;
   justify-content: flex-start;
-  padding-top: 49px;
+  /* Inner border edge (10px inset + 2px stroke), then a 1rem gap. */
+  padding-top: calc(12px + 1rem);
   background:
     linear-gradient(135deg, #FFFEFC 0%, #FBF7F2 50%, #F6EFE6 100%)
       center / calc(100% - 24px) calc(100% - 24px) no-repeat,
@@ -1056,12 +1057,38 @@ h1 {
   mask: none;
 }
 
+.post-7 .mobile-scroll-category {
+  flex-shrink: 0;
+  align-self: flex-end;
+  /* Compensate for the paper's 30px side padding to match the top gap. */
+  margin: 0 calc(12px + 1rem - 30px) 2rem 0;
+  padding: 5px 12px;
+  border: 0.25px solid rgb(94 73 59 / 0.8);
+  border-radius: 5px;
+  background: linear-gradient(135deg, #FFFCF7 0%, #EADCCB 100%);
+  color: #45332A;
+  font-family: 'Sora', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
 .post-7 .font-post-title {
   flex-shrink: 0;
+  width: 90%;
   background: none;
   color: #2C1E19;
   font-size: 34px;
   font-weight: 700;
+}
+
+.post-7 .mobile-scroll-title-gradient {
+  display: inline;
+  background: linear-gradient(135deg, var(--post-7-border-stops));
+  background-clip: text;
+  color: transparent;
+  line-height: inherit;
 }
 
 .post-7 .mobile-scroll-image {
@@ -1086,7 +1113,7 @@ h1 {
 
 .post-7 .font-post-description {
   flex-shrink: 0;
-  width: 100%;
+  width: 90%;
   margin-top: 20px;
   color: #5E493B;
 }
