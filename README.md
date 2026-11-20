@@ -1,3 +1,6 @@
+1080x1350
+
+
 *Chrome => DevTools => Console*
 
 * Remove borders

@@ -288,12 +288,21 @@ h1 {
 .profile {
   width: 320px;
   height: 320px;
-  background: var(--stars), var(--brand-gradient);
+  margin: 0;
+  background:
+    radial-gradient(
+      ellipse at 50% 85%,
+      rgba(0, 240, 255, 0.32) 0%,
+      rgba(59, 130, 246, 0.26) 35%,
+      transparent 75%
+    ),
+    var(--stars),
+    var(--brand-gradient);
   color: var(--premium-white);
   font-family: var(--rough);
   font-weight: 400;
   font-style: oblique;
-  font-size: 9rem;
+  font-size: 125px;
   border: none;
   letter-spacing: 2px;
 }
@@ -1000,6 +1009,96 @@ h1 {
   font-weight: 500;
 }
 
+/* Post 7 */
+.post-7-container {
+  display: flex;
+  justify-content: center;
+}
+
+.post-7 {
+  margin: 0;
+  width: 1080px;
+  height: 1350px;
+  padding: 24px;
+  --post-7-border-stops:
+    #3D1C18 0%,
+    #8D6443 20%,
+    #CEA576 40%,
+    #DDA283 50%,
+    #A9684E 65%,
+    #8D6443 80%,
+    #3D1C18 100%;
+  --post-5-border-gradient: linear-gradient(135deg, var(--post-7-border-stops));
+}
+
+.post-7 .font-post-paper {
+  /* Double the artwork while preserving its existing layout and proportions. */
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: calc(50% - 24px);
+  height: calc(50% - 24px);
+  transform: scale(2);
+  transform-origin: top left;
+  justify-content: flex-start;
+  padding-top: 49px;
+  background:
+    linear-gradient(135deg, #FFFEFC 0%, #FBF7F2 50%, #F6EFE6 100%)
+      center / calc(100% - 24px) calc(100% - 24px) no-repeat,
+    #fff;
+}
+
+.post-7 .font-post-paper::before {
+  inset: 10px;
+  border: 2px solid transparent;
+  border-image: linear-gradient(315deg, var(--post-7-border-stops)) 1;
+  background: none;
+  mask: none;
+}
+
+.post-7 .font-post-title {
+  flex-shrink: 0;
+  background: none;
+  color: #2C1E19;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.post-7 .mobile-scroll-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  flex: 1;
+  min-height: 0;
+  width: 90%;
+  margin-top: 35px;
+  border: none;
+  background: #141821;
+}
+
+.post-7 .mobile-scroll-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-7 .font-post-description {
+  flex-shrink: 0;
+  width: 100%;
+  margin-top: 20px;
+  color: #5E493B;
+}
+
+.post-7 .font-post-link {
+  flex-shrink: 0;
+  color: #45332A;
+  font-size: 28px;
+  border: none;
+  background: linear-gradient(135deg, #FFFCF7 0%, #EADCCB 100%);
+}
+
 /* Post 6 PageSpeed override */
 .post-6 .post-case-study-preview {
   /* padding-bottom: 32px; */
@@ -1119,15 +1218,7 @@ h1 {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background:
-    radial-gradient(
-      ellipse at 50% 85%,
-      rgba(0, 240, 255, 0.32) 0%,
-      rgba(59, 130, 246, 0.26) 35%,
-      transparent 75%
-    ),
-    var(--stars),
-    var(--brand-gradient);
+  background: var(--stars), var(--brand-gradient);
   filter: brightness(0.8);
   pointer-events: none;
 }
